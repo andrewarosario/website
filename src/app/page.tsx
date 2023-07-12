@@ -1,7 +1,9 @@
 import Image from 'next/image';
-import { Mdx } from '@/components/Mdx';
+
 import { allPosts } from 'contentlayer/generated';
+
 import { Button } from '@/components/Button';
+import { Mdx } from '@/components/Mdx';
 
 export default function Home() {
   const posts = allPosts.map((post) => post);
