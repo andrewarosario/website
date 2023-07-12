@@ -1,12 +1,14 @@
 import Link from 'next/link';
 
+import { Logo } from '@/components/Logo';
+
 import * as S from './styles';
 
 export const Header = () => {
   return (
     <S.Container>
       <S.Content>
-        <div>Logo</div>
+        <Logo />
 
         <S.Nav>
           <S.List>
