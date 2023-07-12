@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { headerConfig } from '@/config';
 
 import { Header } from '@/components/Header';
+import { Layout } from '@/components/Layout';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-primary text-gray-100">
         <Header items={headerConfig} />
-        {children}
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
