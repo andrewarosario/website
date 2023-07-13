@@ -1,5 +1,6 @@
 import { allPosts } from 'contentlayer/generated';
 
+import { Grid } from '@/components/Grid';
 import { PostCard } from '@/components/PostCard';
 
 export default function Home() {
@@ -8,15 +9,11 @@ export default function Home() {
   return (
     <main className="">
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae provident
-        officiis perferendis placeat explicabo iure deleniti harum praesentium,
-        esse aperiam, quod accusamus at atque delectus ipsam animi repellendus
-        quidem expedita?
-      </div>
-      <div>
-        {posts.map((post) => (
-          <PostCard key={post._id} />
-        ))}
+        <Grid sm={1} md={2} lg={3}>
+          {posts.map((post) => (
+            <PostCard key={post._id} />
+          ))}
+        </Grid>
       </div>
     </main>
   );
