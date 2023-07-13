@@ -14,6 +14,10 @@ module.exports = {
       pattern: /^gap-/,
       variants: ['sm', 'md', 'lg', 'xl', '2xl']
     },
+    {
+      pattern: /^text-/,
+      variants: ['xs', 'sm', 'md', 'lg', 'xl', '2xl']
+    },
   ],
   theme: {
     extend: {
