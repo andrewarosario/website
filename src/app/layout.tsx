@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-import '@/styles/globals.css';
 import { headerConfig } from '@/config';
+import '@/styles/globals.css';
 
 import { Header } from '@/components/Header';
 import { Layout } from '@/components/Layout';
@@ -20,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-primary text-gray-100">
         <Header items={headerConfig} />
-        <Layout>{children}</Layout>
+
+        <Layout>
+          <div className="pt-20">{children}</div>
+        </Layout>
       </body>
     </html>
   );
