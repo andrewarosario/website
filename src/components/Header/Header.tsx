@@ -1,30 +1,17 @@
-import Link from 'next/link';
-
-import { HeaderNav } from '@/types';
+import { headerConfig } from '@/config';
 
 import { Logo } from '@/components/Logo';
+import { MainNav } from '@/components/MainNav';
 
 import * as S from './styles';
 
-type HeaderProps = {
-  items: HeaderNav;
-};
-
-export const Header = ({ items }: HeaderProps) => {
+export const Header = () => {
   return (
     <S.Container>
       <S.Content>
         <Logo />
 
-        <S.Nav>
-          <S.List>
-            {items.mainNav.map((item) => (
-              <S.ListItem key={item.title}>
-                <Link href={item.href}>{item.title}</Link>
-              </S.ListItem>
-            ))}
-          </S.List>
-        </S.Nav>
+        <MainNav items={headerConfig} />
       </S.Content>
     </S.Container>
   );
