@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@phosphor-icons/react": "github:phosphor-icons/react",
     "@types/mdx": "^2.0.5",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
