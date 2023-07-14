@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 
-export const Container = tw.nav`
+export const Nav = tw.nav`
     flex 
     items-center 
     justify-between
@@ -16,4 +16,13 @@ export const ListItem = tw.li`
     duration-300 
     ease-in-out 
     hover:text-link
+`;
+
+export const Content = tw.div`
+    z-50
+    flex
+    transition-colors
+    duration-300
+    hover:text-link
+    lg:hidden
 `;

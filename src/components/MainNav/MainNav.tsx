@@ -1,7 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { useCallback, useState } from 'react';
 
 import { HeaderNav } from '@/types';
 
+import { ToggleButton } from './components';
 import * as S from './styles';
 
 type MainNavProps = {
@@ -9,9 +13,14 @@ type MainNavProps = {
 };
 
 export const MainNav = ({ items }: MainNavProps) => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const handleToggleMenu = useCallback(() => {
+    setIsOpenMenu((prevState) => !prevState);
+  }, []);
+
   return (
     <>
-      <S.Container>
+      <S.Nav>
         <S.List>
           {items.mainNav.map((item) => (
             <S.ListItem key={item.title}>
@@ -19,7 +28,14 @@ export const MainNav = ({ items }: MainNavProps) => {
             </S.ListItem>
           ))}
         </S.List>
-      </S.Container>
+      </S.Nav>
+
+      <S.Content>
+        <ToggleButton
+          isOpenMenu={isOpenMenu}
+          handleToggleMenu={handleToggleMenu}
+        />
+      </S.Content>
     </>
   );
 };
