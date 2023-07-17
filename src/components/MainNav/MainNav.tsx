@@ -33,6 +33,20 @@ export const MainNav = ({ items }: MainNavProps) => {
           handleToggleMenu={handleToggleMenu}
         />
       </S.Content>
+
+      {isOpenMenu && (
+        <S.ContainerMobile>
+          <S.NavMobile>
+            <S.ListMobile>
+              {items.mainNav.map((item) => (
+                <S.ListItemMobile key={item.title}>
+                  <Link href={item.href}>{item.title}</Link>
+                </S.ListItemMobile>
+              ))}
+            </S.ListMobile>
+          </S.NavMobile>
+        </S.ContainerMobile>
+      )}
     </>
   );
 };
