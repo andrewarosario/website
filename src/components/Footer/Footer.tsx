@@ -4,6 +4,7 @@ import { siteConfig } from '@/config';
 import { NavItem } from '@/types';
 
 import { Layout } from '@/components/Layout';
+import { List, ListItem } from '@/components/List';
 import { Logo } from '@/components/Logo';
 
 import * as S from './styles';
@@ -31,13 +32,13 @@ export const Footer = ({ items }: FooterProps) => {
           <S.Section role="contentinfo">
             <S.Title>Sitemap</S.Title>
 
-            <ul>
+            <List className="flex-col">
               {items.map((item) => (
-                <li key={item.href}>
+                <ListItem key={item.href}>
                   <Link href={item.href}>{item.title}</Link>
-                </li>
+                </ListItem>
               ))}
-            </ul>
+            </List>
           </S.Section>
         </S.Content>
 
