@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 
-import { HeaderNav } from '@/types';
+import { NavItem } from '@/types';
 
 import { ToggleButton } from './components';
 import { useMainNav } from './hooks';
 import * as S from './styles';
 
 type MainNavProps = {
-  items: HeaderNav;
+  items: NavItem[];
 };
 
 export const MainNav = ({ items }: MainNavProps) => {
@@ -19,7 +19,7 @@ export const MainNav = ({ items }: MainNavProps) => {
     <>
       <S.Nav>
         <S.List>
-          {items.mainNav.map((item) => (
+          {items.map((item) => (
             <S.ListItem key={item.title}>
               <Link href={item.href}>{item.title}</Link>
             </S.ListItem>
@@ -38,7 +38,7 @@ export const MainNav = ({ items }: MainNavProps) => {
         <S.ContainerMobile>
           <S.NavMobile>
             <S.ListMobile>
-              {items.mainNav.map((item) => (
+              {items.map((item) => (
                 <S.ListItemMobile key={item.title}>
                   <Link href={item.href}>{item.title}</Link>
                 </S.ListItemMobile>

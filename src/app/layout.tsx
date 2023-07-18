@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
 
+import { headerConfig } from '@/config';
+
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Layout } from '@/components/Layout';
 
@@ -23,6 +26,8 @@ export default function RootLayout({
         <Layout>
           <div className="pt-20">{children}</div>
         </Layout>
+
+        <Footer items={headerConfig.mainNav} />
       </body>
     </html>
   );

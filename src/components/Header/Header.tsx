@@ -11,7 +11,7 @@ export const Header = () => {
       <S.Content>
         <Logo />
 
-        <MainNav items={headerConfig} />
+        <MainNav items={headerConfig.mainNav} />
       </S.Content>
     </S.Container>
   );
