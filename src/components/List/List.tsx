@@ -7,9 +7,5 @@ type ListProps = HTMLAttributes<HTMLUListElement> & {
 };
 
 export const List = ({ children, ...rest }: ListProps) => {
-  return (
-    <>
-      <S.Container {...rest}>{children}</S.Container>
-    </>
-  );
+  return <S.Container {...rest}>{children}</S.Container>;
 };
