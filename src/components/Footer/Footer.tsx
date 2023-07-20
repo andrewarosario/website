@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
-import { siteConfig } from '@/config';
+import { siteConfig, socialLinkConfig } from '@/config';
 import { NavItem } from '@/types';
 
 import { Layout } from '@/components/Layout';
 import { List, ListItem } from '@/components/List';
 import { Logo } from '@/components/Logo';
 
+import { SocialMedia } from '../SocialMedia';
 import * as S from './styles';
 
 type FooterProps = {
@@ -27,6 +28,8 @@ export const Footer = ({ items }: FooterProps) => {
 
           <S.Section role="contentinfo">
             <S.Title>Redes</S.Title>
+
+            <SocialMedia items={socialLinkConfig.mainNav} />
           </S.Section>
 
           <S.Section role="contentinfo">

@@ -11,16 +11,15 @@ export default function Home() {
 
   return (
     <main>
-      <div className="my-6">
+      <div className="my-10">
         <Profile items={siteConfig} />
       </div>
-      <div>
-        <Grid sm={1} md={2} lg={3}>
-          {posts.map((post) => (
-            <PostCard key={post._id} />
-          ))}
-        </Grid>
-      </div>
+
+      <Grid sm={1} md={2} lg={3}>
+        {posts.map((post) => (
+          <PostCard key={post._id} />
+        ))}
+      </Grid>
     </main>
   );
 }
