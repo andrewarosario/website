@@ -1,17 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { BlogPost } from '@/types';
+
 import { Tag } from '@/components/Tag';
 
-export const PostCard = () => {
+type PostCardProps = {
+  post: BlogPost;
+};
+
+export const PostCard = ({ post }: PostCardProps) => {
+  const { frontmatter, slug } = post;
+  const { title, description, image } = frontmatter;
   return (
     <>
-      <Link href="#">
+      <Link href={slug}>
         <div className="relative h-80 w-full">
           <Image
             priority
             className="rounded-xl object-cover object-center"
-            src="/assets/images/background.jpg"
+            src={image}
             alt="title"
             fill
           ></Image>
@@ -30,12 +38,10 @@ export const PostCard = () => {
         </time>
 
         <p className="mt-2 max-w-md text-ellipsis text-2xl font-medium text-gray-50">
-          Confira as novidades do Angular 16
+          {title}
         </p>
 
-        <p className="mt-3 text-gray-400">
-          Vamos conhecer as principais novidades desta nova versão do framework!
-        </p>
+        <p className="mt-3 text-gray-400">{description}</p>
       </Link>
     </>
   );

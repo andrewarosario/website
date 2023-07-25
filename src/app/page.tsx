@@ -16,7 +16,7 @@ export default function Home() {
 
       <Grid sm={1} md={2} lg={3}>
         {posts.map((post) => (
-          <PostCard key={post._id} />
+          <PostCard key={post.slug} post={post} />
         ))}
       </Grid>
     </main>
