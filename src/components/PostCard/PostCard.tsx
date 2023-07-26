@@ -10,7 +10,7 @@ type PostCardProps = {
 };
 
 export const PostCard = ({ post }: PostCardProps) => {
-  const { frontmatter, slug } = post;
+  const { frontmatter, slug, readingTime } = post;
   const { title, description, image } = frontmatter;
   return (
     <>
@@ -34,7 +34,7 @@ export const PostCard = ({ post }: PostCardProps) => {
         </div>
 
         <time className="text-gray-400">
-          13 de junho de 2023 • 4 minutos de leitura
+          13 de junho de 2023 • {readingTime} minutos de leitura
         </time>
 
         <p className="mt-2 max-w-md text-ellipsis text-2xl font-medium text-gray-50">
