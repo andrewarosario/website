@@ -1,6 +1,6 @@
 import { allPosts } from 'contentlayer/generated';
 
-import { slugify } from '@/functions';
+import { formatDate, slugify } from '@/functions';
 
 export const PostService = {
   getAll: () => {
@@ -12,7 +12,7 @@ export const PostService = {
         frontmatter: {
           title: post.title,
           description: post.description,
-          date: post.date,
+          date: formatDate(post.date),
           tags: post.tags,
           image: post.image
         }
