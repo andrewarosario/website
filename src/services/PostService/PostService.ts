@@ -1,23 +1,10 @@
 import { allPosts } from 'contentlayer/generated';
 
-import { formatDate, slugify } from '@/functions';
+import { formatPosts } from '@/functions';
 
 export const PostService = {
   getAll: () => {
-    const formattedPosts = allPosts.map((post) => {
-      return {
-        slug: slugify(post.slug),
-        body: post.body,
-        readingTime: Math.ceil(post.readingTime.minutes),
-        frontmatter: {
-          title: post.title,
-          description: post.description,
-          date: formatDate(post.date),
-          tags: post.tags,
-          image: post.image
-        }
-      };
-    });
+    const formattedPosts = formatPosts(allPosts);
 
     return {
       posts: formattedPosts

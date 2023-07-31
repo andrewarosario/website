@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { formatDate } from '@/functions';
 import { BlogPost } from '@/types';
 
 import { Tag } from '@/components/Tag';
@@ -14,6 +15,7 @@ type PostCardProps = {
 export const PostCard = ({ post }: PostCardProps) => {
   const { frontmatter, slug, readingTime } = post;
   const { title, description, image, date, tags } = frontmatter;
+  const formattedDate = formatDate(date);
   return (
     <>
       <Link href={slug}>
@@ -34,7 +36,7 @@ export const PostCard = ({ post }: PostCardProps) => {
         </S.Content>
 
         <S.Time>
-          {date} • {readingTime} minutos de leitura
+          {formattedDate} • {readingTime} minutos de leitura
         </S.Time>
 
         <S.Title>{title}</S.Title>
