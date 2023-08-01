@@ -7,6 +7,13 @@ export const Container = tw.div`
     justify-center
 `;
 
+export const BackButtonContainer = tw.div`
+    flex
+    w-full
+    justify-items-start
+    pb-4
+`;
+
 export const ImageContainer = tw.div`
     sm:h[30rem]
     relative

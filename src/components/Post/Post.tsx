@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { formatDate } from '@/functions';
 import { BlogPost } from '@/types';
 
+import { BackButton } from '@/components/BackButton';
 import { Mdx } from '@/components/Mdx';
 
 import * as S from './styles';
@@ -18,6 +19,9 @@ export const Post = ({ post }: PostProps) => {
 
   return (
     <S.Container>
+      <S.BackButtonContainer>
+        <BackButton />
+      </S.BackButtonContainer>
       <S.ImageContainer>
         <Image
           src={image}

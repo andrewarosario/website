@@ -1,6 +1,7 @@
 'use client';
 
 export {
+  ArrowLeft as ArrowLeftIcon,
   X as CloseIcon,
   GithubLogo as GithubIcon,
   LinkedinLogo as LinkedinIcon,
