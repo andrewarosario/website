@@ -1,5 +1,7 @@
 import { PostService } from '@/services';
 
+import { Post } from '@/components/Post';
+
 type PostPageProps = {
   params: {
     slug: string;
@@ -8,9 +10,14 @@ type PostPageProps = {
 
 export default function PostPage({ params }: PostPageProps) {
   const post = PostService.getBySlug(params.slug);
+
+  if (!post) {
+    return null;
+  }
+
   return (
-    <div>
-      <h1>{post?.frontmatter.title}</h1>
-    </div>
+    <>
+      <Post post={post} />
+    </>
   );
 }
