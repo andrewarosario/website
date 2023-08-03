@@ -2,6 +2,7 @@
 
 export {
   ArrowLeft as ArrowLeftIcon,
+  ArrowRight as ArrowRightIcon,
   ArrowUp as ArrowUpIcon,
   X as CloseIcon,
   GithubLogo as GithubIcon,
