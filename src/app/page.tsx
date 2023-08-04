@@ -7,7 +7,7 @@ import { PostCard } from '@/components/PostCard';
 import { Profile } from '@/components/Profile';
 
 export default function Home() {
-  const { posts } = PostService.getAll();
+  const { posts, numberPages, currentPage } = PostService.getAll();
 
   return (
     <main>
@@ -22,8 +22,8 @@ export default function Home() {
       </Grid>
 
       <Pagination
-        currentPage={1}
-        numberPages={4}
+        currentPage={currentPage}
+        numberPages={numberPages}
         prevPage="/"
         nextPage="/?page=2"
       />
