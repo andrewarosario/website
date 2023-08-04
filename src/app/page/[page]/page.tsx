@@ -1,20 +1,23 @@
-import { siteConfig } from '@/config';
 import { PostService } from '@/services';
 
 import { Grid } from '@/components/Grid';
 import { Pagination } from '@/components/Pagination';
 import { PostCard } from '@/components/PostCard';
-import { Profile } from '@/components/Profile';
 
-export default function Home() {
-  const { posts, numberPages, currentPage } = PostService.getAll();
+type PageProps = {
+  params: {
+    page: string;
+  };
+};
+
+export default function Page({ params }: PageProps) {
+  const currentPage = +params.page;
+  const { posts, numberPages } = PostService.getAll({ currentPage });
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
+  const nextPage = `/page/${currentPage + 1}`;
 
   return (
-    <main>
-      <div className="my-10">
-        <Profile items={siteConfig} />
-      </div>
-
+    <>
       <Grid sm={1} md={2} lg={3}>
         {posts.map((post) => (
           <PostCard key={post.slug} post={post} />
@@ -24,9 +27,9 @@ export default function Home() {
       <Pagination
         currentPage={currentPage}
         numberPages={numberPages}
-        prevPage="/"
-        nextPage="/page/2"
+        prevPage={prevPage}
+        nextPage={nextPage}
       />
-    </main>
+    </>
   );
 }
