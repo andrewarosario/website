@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config';
+import { paginationPages } from '@/functions';
 import { PostService } from '@/services';
 
 import { Pagination } from '@/components/Pagination';
@@ -7,8 +8,7 @@ import { Profile } from '@/components/Profile';
 
 export default function Home() {
   const { posts, numberPages, currentPage } = PostService.getAll();
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
-  const nextPage = `/page/${currentPage + 1}`;
+  const { prevPage, nextPage } = paginationPages(currentPage);
 
   return (
     <main>

@@ -1,3 +1,4 @@
+import { paginationPages } from '@/functions';
 import { PostService } from '@/services';
 
 import { Pagination } from '@/components/Pagination';
@@ -12,8 +13,7 @@ type PageProps = {
 export default function Page({ params }: PageProps) {
   const currentPage = +params.page;
   const { posts, numberPages } = PostService.getAll({ currentPage });
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
-  const nextPage = `/page/${currentPage + 1}`;
+  const { prevPage, nextPage } = paginationPages(currentPage);
 
   if (!posts.length) {
     return (
