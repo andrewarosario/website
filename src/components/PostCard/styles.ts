@@ -1,4 +1,23 @@
+import Link from 'next/link';
+
 import tw from 'tailwind-styled-components';
+
+export const LinkContainer = tw(Link)<{ $isMain: boolean }>`
+    hover:border-link
+    w-full
+    rounded-lg
+    border-2
+    border-transparent
+    transition-colors
+    duration-300
+    p-3
+    flex
+    flex-col
+
+    ${({ $isMain }) => `
+        ${$isMain && `lg:flex-row mb-3`}
+    `}
+`;
 
 export const ImageContainer = tw.div`
     relative
