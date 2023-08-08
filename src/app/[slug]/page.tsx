@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import { PostService } from '@/services';
 
 import { Post } from '@/components/Post';
@@ -12,12 +14,8 @@ export default function PostPage({ params }: PostPageProps) {
   const post = PostService.getBySlug(params.slug);
 
   if (!post) {
-    return null;
+    notFound();
   }
 
-  return (
-    <>
-      <Post post={post} />
-    </>
-  );
+  return <Post post={post} />;
 }
