@@ -6,7 +6,7 @@ export const siteConfig: Site = {
   title: 'Senior Frontend Engineer e criador de conteúdo.',
   subtitle:
     'Desenvolvedor Frontend, pós-graduado em Desenvolvimento Web e Mobile. Apaixonado por tecnologia e por compartilhar conhecimento.',
-  url: '',
+  url: 'https://google.com',
   links: {
     linkedin: '',
     github: '',
