@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 import { headerConfig } from '@/config';
 
@@ -26,6 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       <body className="bg-primary text-gray-100">
         <Header />
 
