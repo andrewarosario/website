@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main
-  repo: andrewarosario/website
+  repo: andrewarosario/andrewrosario
   base_url: https://andrewrosario.vercel.app/
   auth_endpoint: api/auth/
 
