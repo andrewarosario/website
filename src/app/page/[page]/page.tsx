@@ -11,13 +11,6 @@ type PageProps = {
   };
 };
 
-export function generateStaticParams() {
-  const { posts } = PostService.getAll();
-  return posts.map((post) => ({
-    slug: post.slug
-  }));
-}
-
 export function generateMetadata({ params }: PageProps) {
   const currentPage = +params.page;
   const { posts } = PostService.getAll({ currentPage });
