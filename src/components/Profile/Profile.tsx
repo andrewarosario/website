@@ -11,7 +11,7 @@ type ProfileProps = {
 
 export const Profile = ({ items }: ProfileProps) => {
   return (
-    <div className="flex flex-col-reverse items-center justify-center gap-7 px-4 md:flex-row md:gap-20">
+    <div className="mb-16 mt-10 flex flex-col-reverse items-center justify-center gap-7 sm:mt-14 md:flex-row md:gap-20">
       <div>
         <h1 className="my-3 text-4xl font-bold">
           Olá, eu sou o Andrew Rosário

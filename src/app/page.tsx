@@ -39,9 +39,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="my-10">
-        <Profile items={siteConfig} />
-      </div>
+      <Profile items={siteConfig} />
 
       <PostsList posts={posts} />
 

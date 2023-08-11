@@ -10,7 +10,6 @@ export const LinkContainer = tw(Link)<{ $isMain: boolean }>`
     border-transparent
     transition-colors
     duration-300
-    p-3
     flex
     flex-col
 
