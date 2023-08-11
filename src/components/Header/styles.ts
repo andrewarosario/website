@@ -25,4 +25,5 @@ export const Content = tw.div`
     items-center
     justify-between
     px-4
+    sm:px-10
 `;

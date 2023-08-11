@@ -10,7 +10,7 @@ const mockItems: NavItem[] = [
     title: 'Home'
   },
   {
-    href: '/',
+    href: '/about',
     title: 'Sobre mim'
   }
 ];

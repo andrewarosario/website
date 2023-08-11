@@ -1,7 +1,6 @@
 import { NavItem } from '@/types';
 
-import { List, ListItem } from '@/components/List';
-
+import { Button } from '../Button';
 import * as S from './styles';
 
 type SocialMediaProps = {
@@ -10,15 +9,13 @@ type SocialMediaProps = {
 
 export const SocialMedia = ({ items }: SocialMediaProps) => {
   return (
-    <List className="flex-col">
+    <S.List>
+      <Button>Contato</Button>
       {items.map((item) => (
-        <ListItem key={item.title}>
-          <S.Link href={item.href}>
-            {item?.icon}
-            <S.Text>{item.title}</S.Text>
-          </S.Link>
-        </ListItem>
+        <S.ListItem key={item.title}>
+          <S.Link href={item.href}>{item?.icon}</S.Link>
+        </S.ListItem>
       ))}
-    </List>
+    </S.List>
   );
 };

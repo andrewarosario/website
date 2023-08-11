@@ -6,7 +6,7 @@ describe('Logo', () => {
   it('should render successfully', () => {
     render(<Logo />);
 
-    const logoText = screen.getByRole('heading', { name: /logo/i });
+    const logoText = screen.getByRole('heading', { name: /andrew rosário/i });
     expect(logoText).toBeVisible();
   });
 });

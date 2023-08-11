@@ -10,3 +10,15 @@ export const Link = tw(NextLink)`
 export const Text = tw.p`
     ml-1
 `;
+
+export const List = tw.ul`
+    flex
+    gap-6
+`;
+
+export const ListItem = tw.li`
+    p-2
+    border
+    border-gray-700
+    rounded-full
+`;
