@@ -22,6 +22,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['var(--font-montserrat)'],
         permanent: ['Permanent Marker', 'cursive'],
         foldit: ['Foldit', 'cursive']
       },

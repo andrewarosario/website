@@ -4,7 +4,7 @@ export const Container = tw.header`
     fixed
     z-40
     flex
-    h-16
+    h-20
     w-full
     items-center
     bg-primary/50
@@ -13,6 +13,9 @@ export const Container = tw.header`
     transition-all
     duration-300 
     ease-in-out
+    border-b-[1px]
+    border-b-gray-900
+    border-opacity-[0.5]
 `;
 
 export const Content = tw.div`

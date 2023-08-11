@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
 import { headerConfig } from '@/config';
@@ -9,6 +10,13 @@ import { BackToTop } from '@/components/BackToTop';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Layout } from '@/components/Layout';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '300',
+  variable: '--font-montserrat'
+});
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${montserrat.variable} ${'scroll-smooth'}`}>
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       <body className="bg-primary text-gray-100">
         <Header />
