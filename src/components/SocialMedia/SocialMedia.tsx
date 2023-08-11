@@ -10,11 +10,23 @@ type SocialMediaProps = {
 export const SocialMedia = ({ items }: SocialMediaProps) => {
   return (
     <S.List>
-      <Button>Contato</Button>
+      <Button
+        href="https://andrewrosario.medium.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Blog
+      </Button>
       {items.map((item) => (
-        <S.ListItem key={item.title}>
-          <S.Link href={item.href}>{item?.icon}</S.Link>
-        </S.ListItem>
+        <S.Link
+          title={item.title}
+          key={item.title}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item?.icon}
+        </S.Link>
       ))}
     </S.List>
   );
