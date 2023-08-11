@@ -11,9 +11,25 @@ export const Nav = tw.nav`
     lg:flex
 `;
 
+export const NavItem = tw.li`
+    inline-block
+    transition-all
+    after:block
+    after:origin-center
+    after:scale-x-0
+    after:border-b-2
+    after:transition-all
+    after:duration-500
+    after:ease-in-out
+    hover:font-bold
+    hover:text-link
+    hover:after:scale-x-50
+    hover:after:border-link
+`;
+
 export const List = tw.ul`
     flex 
-    gap-4
+    gap-10
 `;
 
 export const ListItem = tw.li`

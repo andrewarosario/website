@@ -1,13 +1,13 @@
 import tw from 'tailwind-styled-components';
 
-export const Container = tw.button`
-    bg-red-400
-    text-white
-    font-bold
+export const Container = tw.a`
+    rounded-full
+    bg-gray-200
+    px-5
     py-2
-    px-4
-    rounded
-    hover:bg-red-500
-    duration-300
+    text-sm
+    text-primary
     transition-colors
+    duration-300
+    hover:bg-gray-300
 `;
