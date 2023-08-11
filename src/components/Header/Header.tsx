@@ -19,7 +19,7 @@ export const Header = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Blog
+          Artigos
         </Button>
       </S.Content>
     </S.Container>
