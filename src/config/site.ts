@@ -8,6 +8,7 @@ export const siteConfig: Site = {
     'Desenvolvedor Frontend, pós-graduado em Desenvolvimento Web e Mobile. Apaixonado por tecnologia e por compartilhar conhecimento.',
   url: 'https://google.com',
   links: {
+    blog: 'https://andrewrosario.medium.com',
     linkedin: '',
     github: '',
     youtube: ''
