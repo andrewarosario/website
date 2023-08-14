@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config';
 import { BlogPost } from '@/types';
 
 import { Grid } from '@/components/Grid';
@@ -10,22 +11,22 @@ type PostsListProps = {
 };
 
 export const PostsList = ({ posts }: PostsListProps) => {
-  const [firstPost, ...restPosts] = posts;
   return (
-    <S.Container>
-      <h2 className="mb-7 flex items-center justify-between border-b border-b-gray-700 pb-1 text-2xl">
+    <S.Container aria-describedby="last-posts">
+      <h2
+        id="last-posts"
+        className="mb-7 flex items-center justify-between border-b border-b-gray-700 pb-1 text-2xl"
+      >
         Últimos posts
-        <S.Link href="https://andrewrosario.medium.com">
+        <S.Link href={siteConfig.links.blog}>
           Ver mais
           <S.NextPageIcon />
         </S.Link>
       </h2>
 
-      {firstPost && <PostCard post={firstPost} isMain />}
-
-      <Grid sm={1} md={2} lg={3}>
-        {restPosts.map((post) => (
-          <PostCard key={post.slug} post={post} />
+      <Grid>
+        {posts.map((post) => (
+          <PostCard key={post.url} post={post} />
         ))}
       </Grid>
     </S.Container>

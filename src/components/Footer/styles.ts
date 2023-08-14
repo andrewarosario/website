@@ -45,6 +45,6 @@ export const Copyright = tw.p`
     mb-2
     max-w-[18rem]
     text-center
-    text-gray-500
+    text-gray-400
     sm:max-w-fit
 `;

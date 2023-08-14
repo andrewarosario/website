@@ -6,14 +6,14 @@ import { PostCard } from '@/components/PostCard';
 import * as S from './styles';
 
 export const RecommendedPosts = () => {
-  const { posts } = PostService.getAll();
+  const posts = PostService.getAll();
   const recommendedPosts = posts.slice(0, 2);
 
   return (
     <S.Container>
-      <Grid sm={1} md={2} lg={2}>
+      <Grid>
         {recommendedPosts.map((post) => (
-          <PostCard key={post.slug} post={post} />
+          <PostCard key={post.url} post={post} />
         ))}
       </Grid>
     </S.Container>

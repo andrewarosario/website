@@ -1,38 +1,11 @@
 type GridProps = {
   children: React.ReactNode;
-  cols?: number;
-  sm?: number;
-  md?: number;
-  lg?: number;
-  xl?: number;
-  xxl?: number;
-  gap?: number;
 };
 
-export const Grid = ({
-  children,
-  cols = 1,
-  sm,
-  md,
-  lg,
-  xl,
-  xxl,
-  gap = 10
-}: GridProps) => {
-  const small = sm ? `sm:grid-cols-${sm}` : '';
-  const medium = md ? `md:grid-cols-${md}` : '';
-  const large = lg ? `lg:grid-cols-${lg}` : '';
-  const extraLarge = xl ? `xl:grid-cols-${xl}` : '';
-  const extraExtraLarge = xxl ? `2xl:grid-cols-${xxl}` : '';
-  const gapSize = gap ? `gap-${gap}` : '';
-
-  const responsive = `${small} ${medium} ${large} ${extraLarge} ${extraExtraLarge} ${gapSize}`;
-
+export const Grid = ({ children }: GridProps) => {
   return (
-    <>
-      <div className={`grid grid-cols-${cols} ${responsive} w-full`}>
-        {children}
-      </div>
-    </>
+    <div className="grid w-full grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 md:[&>*:first-child]:col-span-2 lg:[&>*:first-child]:col-span-2 2xl:[&>*:first-child]:col-span-2">
+      {children}
+    </div>
   );
 };

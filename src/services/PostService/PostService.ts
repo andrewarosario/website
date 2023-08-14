@@ -1,29 +1,43 @@
-import { allPosts } from 'contentlayer/generated';
-
-import { formatPosts, paginationPosts } from '@/functions';
-
-type GetPostAllParams = {
-  limit?: number;
-  currentPage?: number;
-};
+import { BlogPost } from '@/types';
 
 export const PostService = {
-  getAll: ({ limit = 10, currentPage = 1 }: GetPostAllParams = {}) => {
-    const formattedPosts = formatPosts(allPosts);
-    const numberPages = Math.ceil(formattedPosts.length / limit);
-    const paginatePosts = paginationPosts(formattedPosts, limit, currentPage);
-
-    return {
-      posts: paginatePosts,
-      numberPages,
-      currentPage
-    };
-  },
-
-  getBySlug: (slug: string) => {
-    const formattedPosts = formatPosts(allPosts);
-    const post = formattedPosts.find((post) => post.slug === slug);
-
-    return post;
+  getAll: (): BlogPost[] => {
+    return [
+      {
+        title: 'Como eu inicio projetos Angular',
+        date: '2023-08-10 05:39:31',
+        image: '/assets/images/9213-fotor-20230803165751.png',
+        tags: ['Angular', 'TypeScript'],
+        url: 'https://andrewrosario.medium.com/como-eu-inicio-novos-projetos-angular-c6925019504a'
+      },
+      {
+        title: 'Como eu inicio projetos Angular',
+        date: '2023-08-10 05:39:31',
+        image: '/assets/images/9213-fotor-20230803165751.png',
+        tags: ['Angular', 'TypeScript'],
+        url: 'https://andrewrosario.medium.com/como-eu-inicio-novos-projetos-angular-c6925019504a'
+      },
+      {
+        title: 'Como eu inicio projetos Angular',
+        date: '2023-08-10 05:39:31',
+        image: '/assets/images/9213-fotor-20230803165751.png',
+        tags: ['Angular', 'TypeScript'],
+        url: 'https://andrewrosario.medium.com/como-eu-inicio-novos-projetos-angular-c6925019504a'
+      },
+      {
+        title: 'Como eu inicio projetos Angular',
+        date: '2023-08-10 05:39:31',
+        image: '/assets/images/9213-fotor-20230803165751.png',
+        tags: ['Angular', 'TypeScript'],
+        url: 'https://andrewrosario.medium.com/como-eu-inicio-novos-projetos-angular-c6925019504a'
+      },
+      {
+        title: 'Como eu inicio projetos Angular',
+        date: '2023-08-10 05:39:31',
+        image: '/assets/images/9213-fotor-20230803165751.png',
+        tags: ['Angular', 'TypeScript'],
+        url: 'https://andrewrosario.medium.com/como-eu-inicio-novos-projetos-angular-c6925019504a'
+      }
+    ];
   }
 };

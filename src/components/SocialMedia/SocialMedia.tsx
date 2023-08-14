@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config';
 import { NavItem } from '@/types';
 
 import { Button } from '../Button';
@@ -11,7 +12,7 @@ export const SocialMedia = ({ items }: SocialMediaProps) => {
   return (
     <S.List>
       <Button
-        href="https://andrewrosario.medium.com"
+        href={siteConfig.links.blog}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -22,6 +23,7 @@ export const SocialMedia = ({ items }: SocialMediaProps) => {
           title={item.title}
           key={item.title}
           href={item.href}
+          aria-label={item.title}
           target="_blank"
           rel="noopener noreferrer"
         >
