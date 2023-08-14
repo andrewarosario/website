@@ -4,7 +4,7 @@ import { TagProps } from './Tag';
 
 export const Tag = tw.p<Pick<TagProps, 'size'>>`
     rounded-2xl
-    bg-gray-500
+    bg-gray-600
     px-3
     py-1
     font-normal

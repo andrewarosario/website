@@ -1,12 +1,12 @@
 import tw from 'tailwind-styled-components';
 
 export const LinkContainer = tw.a`
-    hover:border-link
+    hover:-translate-y-1
     w-full
     rounded-lg
     border-2
     border-transparent
-    transition-colors
+    transition-all
     duration-300
     flex
     flex-col
