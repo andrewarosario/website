@@ -1,19 +1,12 @@
-import Link from 'next/link';
-
-import { siteConfig } from '@/config';
-import { NavItem } from '@/types';
+import { siteConfig, socialLinkConfig } from '@/config';
 
 import { Layout } from '@/components/Layout';
-import { List, ListItem } from '@/components/List';
 import { Logo } from '@/components/Logo';
+import { SocialMedia } from '@/components/SocialMedia';
 
 import * as S from './styles';
 
-type FooterProps = {
-  items: NavItem[];
-};
-
-export const Footer = ({ items }: FooterProps) => {
+export const Footer = () => {
   const fullYear = new Date().getFullYear();
 
   return (
@@ -26,19 +19,8 @@ export const Footer = ({ items }: FooterProps) => {
           </S.Section>
 
           <S.Section role="contentinfo">
-            <S.Title>Redes</S.Title>
-          </S.Section>
-
-          <S.Section role="contentinfo">
-            <S.Title>Sitemap</S.Title>
-
-            <List className="flex-col">
-              {items.map((item) => (
-                <ListItem key={item.href}>
-                  <Link href={item.href}>{item.title}</Link>
-                </ListItem>
-              ))}
-            </List>
+            <S.SocialTitle>Redes</S.SocialTitle>
+            <SocialMedia items={socialLinkConfig.mainNav} />
           </S.Section>
         </S.Content>
 
