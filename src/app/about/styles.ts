@@ -15,7 +15,7 @@ export const Subtitle = tw.strong`
 `;
 
 export const Paragraph = tw.p`
-  mb-2
+  mb-3
   text-xl
   font-normal
   leading-relaxed
