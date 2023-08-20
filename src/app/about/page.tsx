@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <S.Subtitle>Sobre mim</S.Subtitle>
+      <S.Title>Sobre mim</S.Title>
 
       <S.ImageContainer>
         <Image
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </S.Paragraph>
 
       <S.Paragraph>
-        Logo no início da minha carreira, recebia muitos feedbacks positivos
+        Logo no início da minha carreira, recebi muitos feedbacks positivos
         sobre como eu conseguia disseminar conhecimento dentro das empresas.
         Isso me motivou a criar um{' '}
         <Link href={siteConfig.links.blog}>Blog no Medium</Link> e um{' '}

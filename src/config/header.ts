@@ -7,8 +7,8 @@ export const headerConfig: HeaderNav = {
       href: '/'
     },
     {
-      title: 'Artigos',
-      href: '/articles'
+      title: 'Talks',
+      href: '/talks'
     },
     {
       title: 'Sobre mim',
