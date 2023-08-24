@@ -23,6 +23,7 @@ export const Paragraph = tw.p`
 
 export const ImageContainer = tw.div`
   relative
-  h-96
+  h-[30rem]
   w-full
+  mb-4
 `;

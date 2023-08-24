@@ -39,8 +39,8 @@ export default function AboutPage() {
       <S.ImageContainer>
         <Image
           className="rounded-xl object-cover object-center"
-          src="/assets/images/background.jpg"
-          alt="Foto de exemplo"
+          src="/assets/images/andrew.jpg"
+          alt="Eu em Portillo - Chile"
           fill
         />
       </S.ImageContainer>
