@@ -10,7 +10,7 @@ import * as S from './styles';
 
 export default function TalksPage() {
   return (
-    <main>
+    <main className="pt-6">
       <S.Title>Talks</S.Title>
 
       <S.Paragraph>
@@ -34,7 +34,7 @@ export default function TalksPage() {
               <LinkIcon />
             </NextLink>
           </h2>
-          <p className="text-gray-400">{talk.description}</p>
+          <p className="mb-2 text-gray-400">{talk.description}</p>
 
           <VideoEmbed src={talk.url} />
         </div>

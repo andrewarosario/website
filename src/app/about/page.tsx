@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="pt-6">
       <S.Title>Sobre mim</S.Title>
 
       <S.ImageContainer>
