@@ -11,22 +11,31 @@ export const Container = tw.footer`
 
 export const Content = tw.div`
     flex
+    flex-col
+    md:flex-row
     w-full
     justify-between
     pb-10
+    gap-10
 `;
 
 export const Section = tw.div`
     flex
-    max-w-[8rem]
     flex-col
-    gap-6
-    sm:max-w-xs
+    gap-4
+    md:max-w-xs
 `;
 
 export const Title = tw.p`
     text-bold 
     text-xl
+`;
+
+export const SocialTitle = tw.p`
+    text-bold 
+    text-xl
+    hidden
+    md:block
 `;
 
 export const Navigation = tw.nav`
@@ -45,6 +54,6 @@ export const Copyright = tw.p`
     mb-2
     max-w-[18rem]
     text-center
-    text-gray-500
+    text-gray-400
     sm:max-w-fit
 `;

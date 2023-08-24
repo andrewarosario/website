@@ -5,6 +5,7 @@ export type Site = {
   subtitle: string;
   url: string;
   links: {
+    blog: string;
     linkedin: string;
     github: string;
     youtube: string;

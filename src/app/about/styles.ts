@@ -15,7 +15,7 @@ export const Subtitle = tw.strong`
 `;
 
 export const Paragraph = tw.p`
-  mb-2
+  mb-3
   text-xl
   font-normal
   leading-relaxed
@@ -23,6 +23,7 @@ export const Paragraph = tw.p`
 
 export const ImageContainer = tw.div`
   relative
-  h-96
+  h-[30rem]
   w-full
+  mb-4
 `;

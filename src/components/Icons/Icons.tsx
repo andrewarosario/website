@@ -6,6 +6,7 @@ export {
   ArrowUp as ArrowUpIcon,
   X as CloseIcon,
   GithubLogo as GithubIcon,
+  LinkSimpleHorizontal as LinkIcon,
   LinkedinLogo as LinkedinIcon,
   List as OpenIcon,
   TwitterLogo as TwitterIcon,

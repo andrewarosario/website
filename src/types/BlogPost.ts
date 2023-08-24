@@ -1,14 +1,7 @@
-import { MDX } from 'contentlayer/core';
-
 export type BlogPost = {
-  slug: string;
-  readingTime: number;
-  body: MDX;
-  frontmatter: {
-    title: string;
-    description: string;
-    date: string;
-    tags?: string[];
-    image: string;
-  };
+  title: string;
+  url: string;
+  date: string;
+  tags?: string[];
+  image: string;
 };

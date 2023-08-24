@@ -1,4 +1,4 @@
-import { headerConfig } from '@/config';
+import { headerConfig, siteConfig } from '@/config';
 
 import { Button } from '@/components/Button';
 import { Logo } from '@/components/Logo';
@@ -15,11 +15,12 @@ export const Header = () => {
         <MainNav items={headerConfig.mainNav} />
 
         <Button
-          href="https://andrewrosario.medium.com"
+          className="hidden md:block"
+          href={siteConfig.links.blog}
           target="_blank"
           rel="noreferrer"
         >
-          Blog
+          Artigos
         </Button>
       </S.Content>
     </S.Container>

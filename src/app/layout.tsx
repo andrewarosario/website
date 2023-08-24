@@ -4,8 +4,6 @@ import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
-import { headerConfig } from '@/config';
-
 import { BackToTop } from '@/components/BackToTop';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
@@ -45,7 +43,7 @@ export default function RootLayout({
 
         <BackToTop />
 
-        <Footer items={headerConfig.mainNav} />
+        <Footer />
       </body>
     </html>
   );

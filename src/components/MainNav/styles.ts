@@ -8,7 +8,7 @@ export const Nav = tw.nav`
     justify-between
     hidden
 
-    lg:flex
+    md:flex
 `;
 
 export const NavItem = tw.li`
@@ -45,7 +45,7 @@ export const Content = tw.div`
     transition-colors
     duration-300
     hover:text-link
-    lg:hidden
+    md:hidden
 `;
 
 export const ContainerMobile = tw.div`

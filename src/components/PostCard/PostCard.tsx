@@ -9,17 +9,15 @@ import * as S from './styles';
 
 type PostCardProps = {
   post: BlogPost;
-  isMain?: boolean;
 };
 
-export const PostCard = ({ post, isMain = false }: PostCardProps) => {
-  const { frontmatter, slug, readingTime } = post;
-  const { title, description, image, date, tags } = frontmatter;
+export const PostCard = ({ post }: PostCardProps) => {
+  const { title, image, date, tags, url } = post;
   const formattedDate = formatDate(date);
   return (
     <>
-      <S.LinkContainer href={slug} $isMain={isMain}>
-        <S.ImageContainer className={`${isMain && 'lg:mr-3'}`}>
+      <S.LinkContainer href={url}>
+        <S.ImageContainer>
           <Image
             priority
             className="rounded-xl object-cover object-center"
@@ -29,17 +27,13 @@ export const PostCard = ({ post, isMain = false }: PostCardProps) => {
           />
         </S.ImageContainer>
 
-        <S.Content className={`${isMain && 'lg:pt-0'}`}>
+        <S.Content>
           <S.TagsContainer>
             {tags?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
           </S.TagsContainer>
-          <S.Time>
-            {formattedDate} • {readingTime} minutos de leitura
-          </S.Time>
+          <S.Time>{formattedDate}</S.Time>
 
           <S.Title>{title}</S.Title>
-
-          <S.Description>{description}</S.Description>
         </S.Content>
       </S.LinkContainer>
     </>
