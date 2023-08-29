@@ -1,13 +1,13 @@
-import { PostService } from '@/services';
+import { ArticleDetailService } from '@/services/PostService/ArticleDetailService';
 
 import { Grid } from '@/components/Grid';
-import { PostCard } from '@/components/PostCard';
 
+import { PostCard } from '../PostCard';
 import * as S from './styles';
 
-export const RecommendedPosts = () => {
-  const posts = PostService.getAll();
-  const recommendedPosts = posts.slice(0, 2);
+export const RecommendedPosts = async () => {
+  const articles = await ArticleDetailService.getArticles();
+  const recommendedPosts = articles.slice(0, 2);
 
   return (
     <S.Container>
