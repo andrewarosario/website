@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import { siteConfig } from '@/config';
-import { ArticleService, PostService } from '@/services';
+import { ArticleDetailService } from '@/services/PostService/ArticleDetailService';
 
 import { PostsList } from '@/components/PostsList';
 import { Profile } from '@/components/Profile';
@@ -32,14 +32,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const posts = PostService.getAll();
-  const postIds = await ArticleService.getIds();
-  console.log(postIds);
+  const articles = await ArticleDetailService.getArticles();
 
   return (
     <main>
       <Profile items={siteConfig} />
-      <PostsList posts={posts} />
+      <PostsList posts={articles} />
     </main>
   );
 }
