@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config';
+import { site } from '@/config';
 import { NavItem } from '@/types';
 
 import { Button } from '../Button';
@@ -11,11 +11,7 @@ type SocialMediaProps = {
 export const SocialMedia = ({ items }: SocialMediaProps) => {
   return (
     <S.List>
-      <Button
-        href={siteConfig.links.blog}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Button href={site.links.blog} target="_blank" rel="noopener noreferrer">
         Blog
       </Button>
       {items.map((item) => (

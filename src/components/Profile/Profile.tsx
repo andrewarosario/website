@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { socialLinkConfig } from '@/config';
+import { socialLinks } from '@/config';
 import { Site } from '@/types';
 
 import { SocialMedia } from '../SocialMedia';
@@ -18,7 +18,7 @@ export const Profile = ({ items }: ProfileProps) => {
         </h1>
         <p className="text-md text-gray-400">{items.subtitle}</p>
         <div className="mt-6">
-          <SocialMedia items={socialLinkConfig.mainNav} />
+          <SocialMedia items={socialLinks} />
         </div>
       </div>
       <Image

@@ -1,4 +1,4 @@
-import { HeaderNav } from '@/types';
+import { NavItem } from '@/types';
 
 import {
   GithubIcon,
@@ -7,29 +7,27 @@ import {
   YoutubeIcon
 } from '@/components/Icons';
 
-import { siteConfig } from './site';
+import { site } from './site';
 
-export const socialLinkConfig: HeaderNav = {
-  mainNav: [
-    {
-      title: 'Linkedin',
-      href: siteConfig.links.linkedin,
-      icon: <LinkedinIcon size={20} />
-    },
-    {
-      title: 'Twitter',
-      href: siteConfig.links.twitter,
-      icon: <TwitterIcon size={20} />
-    },
-    {
-      title: 'Youtube',
-      href: siteConfig.links.youtube,
-      icon: <YoutubeIcon size={20} />
-    },
-    {
-      title: 'Github',
-      href: siteConfig.links.github,
-      icon: <GithubIcon size={20} />
-    }
-  ]
-};
+export const socialLinks: NavItem[] = [
+  {
+    title: 'Linkedin',
+    href: site.links.linkedin,
+    icon: <LinkedinIcon size={20} />
+  },
+  {
+    title: 'Twitter',
+    href: site.links.twitter,
+    icon: <TwitterIcon size={20} />
+  },
+  {
+    title: 'Youtube',
+    href: site.links.youtube,
+    icon: <YoutubeIcon size={20} />
+  },
+  {
+    title: 'Github',
+    href: site.links.github,
+    icon: <GithubIcon size={20} />
+  }
+];

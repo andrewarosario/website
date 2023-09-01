@@ -1,6 +1,6 @@
 import { Site } from '@/types';
 
-export const siteConfig: Site = {
+export const site: Site = {
   name: 'Andrew Rosário',
   description: 'Site pessoal',
   title: 'Senior Frontend Engineer e criador de conteúdo.',
