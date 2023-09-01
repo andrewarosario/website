@@ -7,26 +7,28 @@ import {
   YoutubeIcon
 } from '@/components/Icons';
 
+import { siteConfig } from './site';
+
 export const socialLinkConfig: HeaderNav = {
   mainNav: [
     {
       title: 'Linkedin',
-      href: 'https://www.linkedin.com/in/andrewarosario/',
+      href: siteConfig.links.linkedin,
       icon: <LinkedinIcon size={20} />
     },
     {
       title: 'Twitter',
-      href: 'https://www.twitter.com/andrewarosario/',
+      href: siteConfig.links.twitter,
       icon: <TwitterIcon size={20} />
     },
     {
       title: 'Youtube',
-      href: 'https://www.youtube.com/andrewrosario/',
+      href: siteConfig.links.youtube,
       icon: <YoutubeIcon size={20} />
     },
     {
       title: 'Github',
-      href: 'https://www.github.com/andrewarosario/',
+      href: siteConfig.links.github,
       icon: <GithubIcon size={20} />
     }
   ]
