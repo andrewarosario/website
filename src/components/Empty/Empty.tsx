@@ -6,8 +6,8 @@ type EmptyProps = {
 
 export const Empty = ({ children }: EmptyProps) => {
   return (
-    <S.Container>
-      <S.Content>{children}</S.Content>
+    <S.Container data-testid="empty-container">
+      <S.Content data-testid="empty-content">{children}</S.Content>
     </S.Container>
   );
 };
