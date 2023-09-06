@@ -7,10 +7,14 @@ describe('Footer', () => {
   it('should render correctly', () => {
     render(<Footer />);
 
-    const title = screen.getByText(site.title);
+    const siteTitle = screen.getByText(site.title);
     const socialMediaSection = screen.getByText(/redes/i);
+    const logo = screen.getByRole('heading', { level: 2 });
+    const socialMediaList = screen.getByRole('list');
 
-    expect(title).toBeVisible();
+    expect(siteTitle).toBeVisible();
     expect(socialMediaSection).toBeVisible();
+    expect(logo).toBeVisible();
+    expect(socialMediaList).toBeVisible();
   });
 });
