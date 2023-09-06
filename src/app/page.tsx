@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <main>
-      <Profile items={site} />
+      <Profile />
       <PostsList posts={posts} />
     </main>
   );
