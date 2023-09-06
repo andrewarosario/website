@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import { siteConfig } from '@/config';
+import { site } from '@/config';
 
 import { Link } from '@/components/Link';
 
@@ -10,7 +10,7 @@ import * as S from './styles';
 export const metadata: Metadata = {
   title: 'Sobre mim',
   description: 'Sobre mim',
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(site.url),
   openGraph: {
     type: 'website',
     title: 'Sobre mim',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Sobre mim',
     images: [
       {
-        url: `${siteConfig.url}/assets/images/image-post.jpeg`
+        url: `${site.url}/assets/images/image-post.jpeg`
       }
     ]
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sobre mim',
     description: 'Sobre mim',
-    images: [`${siteConfig.url}/assets/images/image-post.jpeg`]
+    images: [`${site.url}/assets/images/image-post.jpeg`]
   }
 };
 
@@ -72,10 +72,10 @@ export default function AboutPage() {
         Logo no início da minha carreira, recebi muitos feedbacks positivos
         sobre como eu conseguia disseminar conhecimento dentro das empresas.
         Isso me motivou a criar um{' '}
-        <Link href={siteConfig.links.blog}>Blog no Medium</Link> e um{' '}
-        <Link href={siteConfig.links.youtube}>Canal no YouTube</Link>. Descobri
-        que era apaixonado por compartilhar conteúdos, principalmente ao
-        perceber que conseguia impactar muitas pessoas com eles.
+        <Link href={site.links.blog}>Blog no Medium</Link> e um{' '}
+        <Link href={site.links.youtube}>Canal no YouTube</Link>. Descobri que
+        era apaixonado por compartilhar conteúdos, principalmente ao perceber
+        que conseguia impactar muitas pessoas com eles.
       </S.Paragraph>
 
       <S.Paragraph>

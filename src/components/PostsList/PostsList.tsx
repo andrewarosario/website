@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config';
+import { site } from '@/config';
 import { BlogPost } from '@/types';
 
 import { Grid } from '@/components/Grid';
@@ -18,7 +18,7 @@ export const PostsList = ({ posts }: PostsListProps) => {
         className="mb-7 flex items-center justify-between border-b border-b-gray-700 pb-1 text-2xl"
       >
         Últimos posts
-        <S.Link href={siteConfig.links.blog}>
+        <S.Link href={site.links.blog}>
           Ver mais
           <S.NextPageIcon />
         </S.Link>

@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 
-import { talksConfig } from '@/config';
+import { talks } from '@/config';
 
 import { LinkIcon } from '@/components/Icons';
 import { Link } from '@/components/Link';
@@ -20,7 +20,7 @@ export default function TalksPage() {
         comigo. 😃
       </S.Paragraph>
 
-      {talksConfig.map((talk) => (
+      {talks.map((talk) => (
         <div key={talk.id} className="mb-10 mt-7">
           <h2
             id={talk.id}

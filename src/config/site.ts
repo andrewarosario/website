@@ -1,6 +1,6 @@
 import { Site } from '@/types';
 
-export const siteConfig: Site = {
+export const site: Site = {
   name: 'Andrew Rosário',
   description: 'Site pessoal',
   title: 'Senior Frontend Engineer e criador de conteúdo.',
@@ -9,8 +9,9 @@ export const siteConfig: Site = {
   url: 'https://google.com',
   links: {
     blog: 'https://andrewrosario.medium.com',
-    linkedin: '',
-    github: '',
-    youtube: ''
+    twitter: 'https://www.twitter.com/andrewarosario/',
+    linkedin: 'https://www.linkedin.com/in/andrewarosario/',
+    github: 'https://www.github.com/andrewarosario/',
+    youtube: 'https://www.youtube.com/andrewrosario/'
   }
 };

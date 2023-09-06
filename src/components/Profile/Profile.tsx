@@ -1,35 +1,27 @@
 import Image from 'next/image';
 
-import { socialLinkConfig } from '@/config';
-import { Site } from '@/types';
+import { site, socialLinks } from '@/config';
 
 import { SocialMedia } from '../SocialMedia';
+import * as S from './styles';
 
-type ProfileProps = {
-  items: Site;
-};
-
-export const Profile = ({ items }: ProfileProps) => {
+export const Profile = () => {
   return (
-    <div className="mb-16 mt-10 flex flex-col-reverse items-center justify-center gap-7 sm:mt-14 md:flex-row md:gap-20">
+    <S.Container>
       <div>
-        <h1 className="my-3 text-4xl font-bold">
-          Olá, eu sou o Andrew Rosário
-        </h1>
-        <p className="text-md text-gray-400">{items.subtitle}</p>
-        <div className="mt-6">
-          <SocialMedia items={socialLinkConfig.mainNav} />
-        </div>
+        <S.Title>Olá, eu sou o Andrew Rosário</S.Title>
+        <S.Subtitle>{site.subtitle}</S.Subtitle>
+        <SocialMedia items={socialLinks} />
       </div>
       <Image
         src="/assets/images/profile.jpeg"
-        alt="profile image"
+        alt="Imagem de perfil do Andrew"
         width={260}
         height={260}
         title="profile image"
         priority
         className="rounded-full"
       />
-    </div>
+    </S.Container>
   );
 };

@@ -1,21 +1,21 @@
 import { Metadata } from 'next';
 
-import { siteConfig } from '@/config';
+import { site } from '@/config';
 import { PostService } from '@/services';
 
 import { PostsList } from '@/components/PostsList';
 import { Profile } from '@/components/Profile';
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url),
+  title: site.name,
+  description: site.description,
+  metadataBase: new URL(site.url),
   openGraph: {
     type: 'website',
-    title: siteConfig.name,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    title: site.name,
+    url: site.url,
+    description: site.description,
+    siteName: site.name,
     images: [
       {
         url: '/image-post.jpeg'
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   robots: 'all',
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/image-post.jpeg`]
+    title: site.title,
+    description: site.description,
+    images: [`${site.url}/image-post.jpeg`]
   }
 };
 
@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <main>
-      <Profile items={siteConfig} />
+      <Profile />
       <PostsList posts={posts} />
     </main>
   );

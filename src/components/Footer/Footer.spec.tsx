@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config';
+import { site } from '@/config';
 import { render, screen } from '@testing-library/react';
 
 import { Footer } from './Footer';
@@ -7,10 +7,14 @@ describe('Footer', () => {
   it('should render correctly', () => {
     render(<Footer />);
 
-    const title = screen.getByText(siteConfig.title);
+    const siteTitle = screen.getByText(site.title);
     const socialMediaSection = screen.getByText(/redes/i);
+    const logo = screen.getByRole('heading', { level: 2 });
+    const socialMediaList = screen.getByRole('list');
 
-    expect(title).toBeVisible();
+    expect(siteTitle).toBeVisible();
     expect(socialMediaSection).toBeVisible();
+    expect(logo).toBeVisible();
+    expect(socialMediaList).toBeVisible();
   });
 });

@@ -1,4 +1,4 @@
-import { siteConfig, socialLinkConfig } from '@/config';
+import { site, socialLinks } from '@/config';
 
 import { Layout } from '@/components/Layout';
 import { Logo } from '@/components/Logo';
@@ -15,12 +15,12 @@ export const Footer = () => {
         <S.Content>
           <S.Section role="contentinfo">
             <Logo />
-            <S.Title>{siteConfig.title}</S.Title>
+            <S.Title>{site.title}</S.Title>
           </S.Section>
 
           <S.Section role="contentinfo">
             <S.SocialTitle>Redes</S.SocialTitle>
-            <SocialMedia items={socialLinkConfig.mainNav} />
+            <SocialMedia items={socialLinks} />
           </S.Section>
         </S.Content>
 

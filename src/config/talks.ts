@@ -1,6 +1,6 @@
 import { Talk } from '@/types';
 
-export const talksConfig: Talk[] = [
+export const talks: Talk[] = [
   {
     title: 'Nx: Escalando seu frontend com Monorepo',
     id: 'nx-frontend',

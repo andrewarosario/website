@@ -40,7 +40,9 @@ export const MainNav = ({ items }: MainNavProps) => {
             <S.ListMobile>
               {items.map((item) => (
                 <S.ListItemMobile key={item.title}>
-                  <Link href={item.href}>{item.title}</Link>
+                  <Link href={item.href} onClick={handleToggleMenu}>
+                    {item.title}
+                  </Link>
                 </S.ListItemMobile>
               ))}
             </S.ListMobile>

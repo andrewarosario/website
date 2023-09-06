@@ -1,4 +1,4 @@
-import { headerConfig, siteConfig } from '@/config';
+import { navItems, site } from '@/config';
 
 import { Button } from '@/components/Button';
 import { Logo } from '@/components/Logo';
@@ -12,11 +12,11 @@ export const Header = () => {
       <S.Content>
         <Logo />
 
-        <MainNav items={headerConfig.mainNav} />
+        <MainNav items={navItems} />
 
         <Button
           className="hidden md:block"
-          href={siteConfig.links.blog}
+          href={site.links.blog}
           target="_blank"
           rel="noreferrer"
         >
