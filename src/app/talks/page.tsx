@@ -36,7 +36,7 @@ export default function TalksPage() {
           </h2>
           <p className="mb-2 text-gray-400">{talk.description}</p>
 
-          <VideoEmbed src={talk.url} />
+          <VideoEmbed title={talk.title} src={talk.url} />
         </div>
       ))}
     </main>
