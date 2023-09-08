@@ -33,7 +33,6 @@
         "newlinesBetween": "always",
         "groups": [
           ["/^react/", "/^next/"],
-          "/^contentlayer/",
           "module",
           "/^@shared/",
           "absolute",
