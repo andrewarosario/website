@@ -16,7 +16,8 @@ export const Button = tw.button`
     group
     pointer-events-auto
     absolute
-    bottom-8
+    bottom-12
+    sm:bottom-8
     right-8
     flex
     items-center

@@ -1,7 +1,7 @@
 'use client';
 
+import { useBackToTop } from './hooks';
 import * as S from './styles';
-import { useBackToTop } from './useBackToTop';
 
 export const BackToTop = () => {
   const { show } = useBackToTop();
