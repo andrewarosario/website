@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { site } from '@/config';
 
 import { Link } from '@/components/Link';
+import { Title } from '@/components/Title';
 
 import * as S from './styles';
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="pt-6">
-      <S.Title>Sobre mim</S.Title>
+      <Title>Sobre mim</Title>
 
       <S.ImageContainer>
         <Image
