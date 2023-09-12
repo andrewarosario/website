@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { Title } from './Title';
 
-describe('Title Component', () => {
+describe('Title', () => {
   it('should render title text correctly', () => {
     const titleText = 'Hello, World!';
     render(<Title>{titleText}</Title>);
