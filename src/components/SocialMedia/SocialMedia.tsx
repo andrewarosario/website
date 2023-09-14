@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { site } from '@/config';
 import { NavItem } from '@/types';
 
@@ -10,22 +12,31 @@ type SocialMediaProps = {
 
 export const SocialMedia = ({ items }: SocialMediaProps) => {
   return (
-    <S.List>
-      <Button href={site.links.blog} target="_blank" rel="noopener noreferrer">
-        Blog
-      </Button>
-      {items.map((item) => (
-        <S.Link
-          title={item.title}
-          key={item.title}
-          href={item.href}
-          aria-label={item.title}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {item?.icon}
-        </S.Link>
-      ))}
-    </S.List>
+    <nav>
+      <S.List>
+        <li>
+          <Button
+            href={site.links.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </Button>
+        </li>
+        {items.map((item) => (
+          <li key={item.title}>
+            <Link
+              title={item.title}
+              href={item.href}
+              aria-label={item.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <S.SocialMediaItem>{item?.icon}</S.SocialMediaItem>
+            </Link>
+          </li>
+        ))}
+      </S.List>
+    </nav>
   );
 };
