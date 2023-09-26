@@ -15,8 +15,8 @@ export const PostCard = ({ post }: PostCardProps) => {
   const { title, image, date, tags, url } = post;
   const formattedDate = formatDate(date);
   return (
-    <>
-      <S.LinkContainer href={url}>
+    <a href={url}>
+      <S.LinkContainer>
         <S.ImageContainer>
           <Image
             priority
@@ -36,6 +36,6 @@ export const PostCard = ({ post }: PostCardProps) => {
           <S.Title>{title}</S.Title>
         </S.Content>
       </S.LinkContainer>
-    </>
+    </a>
   );
 };

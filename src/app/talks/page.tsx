@@ -4,21 +4,21 @@ import { talks } from '@/config';
 
 import { LinkIcon } from '@/components/Icons';
 import { Link } from '@/components/Link';
+import { Paragraph } from '@/components/Paragraph';
+import { Title } from '@/components/Title';
 import { VideoEmbed } from '@/components/VideoEmbed';
-
-import * as S from './styles';
 
 export default function TalksPage() {
   return (
-    <main className="pt-6">
-      <S.Title>Talks</S.Title>
+    <main>
+      <Title>Talks</Title>
 
-      <S.Paragraph>
+      <Paragraph>
         Essas são as gravações das palestras que eu apresentei. Se você acha que
         seria legal me ter palestrando em seu evento,{' '}
         <Link href="mailto:andrew.arosario@gmail.com">entre em contato</Link>{' '}
         comigo. 😃
-      </S.Paragraph>
+      </Paragraph>
 
       {talks.map((talk) => (
         <div key={talk.id} className="mb-10 mt-7">
@@ -36,7 +36,7 @@ export default function TalksPage() {
           </h2>
           <p className="mb-2 text-gray-400">{talk.description}</p>
 
-          <VideoEmbed src={talk.url} />
+          <VideoEmbed title={talk.title} src={talk.url} />
         </div>
       ))}
     </main>

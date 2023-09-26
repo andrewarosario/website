@@ -1,8 +1,12 @@
-import NextLink from 'next/link';
-
 import tw from 'tailwind-styled-components';
 
-export const Link = tw(NextLink)`
+export const List = tw.ul`
+    flex
+    items-center
+    gap-6
+`;
+
+export const SocialMediaItem = tw.div`
     p-2
     border
     border-gray-700
@@ -10,13 +14,4 @@ export const Link = tw(NextLink)`
     hover:bg-gray-700
     transition-colors
     duration-300
-`;
-
-export const Text = tw.p`
-    ml-1
-`;
-
-export const List = tw.ul`
-    flex
-    gap-6
 `;

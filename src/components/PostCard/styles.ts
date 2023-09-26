@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 
-export const LinkContainer = tw.a`
+export const LinkContainer = tw.article`
     hover:-translate-y-1
     w-full
     rounded-lg
@@ -33,7 +33,7 @@ export const Time = tw.time`
     text-gray-400
 `;
 
-export const Title = tw.p`
+export const Title = tw.h2`
     mt-2
     max-w-md
     text-ellipsis

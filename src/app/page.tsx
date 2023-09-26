@@ -8,13 +8,13 @@ import { Profile } from '@/components/Profile';
 
 export const metadata: Metadata = {
   title: site.name,
-  description: site.description,
+  description: site.title,
   metadataBase: new URL(site.url),
   openGraph: {
     type: 'website',
     title: site.name,
     url: site.url,
-    description: site.description,
+    description: site.title,
     siteName: site.name,
     images: [
       {
@@ -22,13 +22,7 @@ export const metadata: Metadata = {
       }
     ]
   },
-  robots: 'all',
-  twitter: {
-    card: 'summary_large_image',
-    title: site.title,
-    description: site.description,
-    images: [`${site.url}/image-post.jpeg`]
-  }
+  robots: 'all'
 };
 
 export default function Home() {

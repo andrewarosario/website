@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${'scroll-smooth'}`}>
+    <html lang="pt-br" className={`${montserrat.variable} ${'scroll-smooth'}`}>
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       <body className="bg-primary text-gray-100">
         <Header />

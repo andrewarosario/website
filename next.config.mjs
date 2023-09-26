@@ -1,5 +1,4 @@
 import withPlugins from 'next-compose-plugins';
-import { withContentlayer } from 'next-contentlayer';
 import withPWAInit from 'next-pwa';
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -30,4 +29,4 @@ const nextConfig = {
   }
 };
 
-export default withPlugins([withPWA, withContentlayer], nextConfig);
+export default withPlugins([withPWA], nextConfig);
