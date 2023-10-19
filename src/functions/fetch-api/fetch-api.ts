@@ -7,6 +7,7 @@ export async function fetchApi<T = unknown>(
       'X-RapidAPI-Key': process.env.RAPIDAPI_KEY as string,
       'X-RapidAPI-Host': process.env.RAPIDAPI_HOST as string
     },
+    next: { tags: ['medium'] },
     ...init
   });
   const result = await data.json();

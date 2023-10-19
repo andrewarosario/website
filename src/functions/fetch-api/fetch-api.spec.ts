@@ -44,6 +44,7 @@ describe('fetchApi', () => {
           'X-RapidAPI-Key': process.env.RAPIDAPI_KEY,
           'X-RapidAPI-Host': process.env.RAPIDAPI_HOST
         },
+        next: { tags: ['medium'] },
         ...mockInit
       }
     );
