@@ -10,27 +10,7 @@ import { Title } from '@/components/Title';
 import * as S from './styles';
 
 export const metadata: Metadata = {
-  title: 'Sobre mim',
-  description: 'Sobre mim',
-  metadataBase: new URL(site.url),
-  openGraph: {
-    type: 'website',
-    title: 'Sobre mim',
-    url: '/about',
-    description: 'Sobre mim',
-    siteName: 'Sobre mim',
-    images: [
-      {
-        url: `${site.url}/assets/images/image-post.jpeg`
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sobre mim',
-    description: 'Sobre mim',
-    images: [`${site.url}/assets/images/image-post.jpeg`]
-  }
+  title: 'Sobre mim'
 };
 
 export default function AboutPage() {
