@@ -4,8 +4,8 @@ export const site: Site = {
   name: 'Andrew Rosário',
   title: 'Senior Frontend Engineer e criador de conteúdo.',
   subtitle:
-    'Desenvolvedor Frontend, pós-graduado em Desenvolvimento Web e Mobile. Apaixonado por tecnologia e por compartilhar conhecimento.',
-  url: 'https://google.com',
+    'Desenvolvedor Frontend, mentor e palestrante. Apaixonado por tecnologia e por compartilhar conhecimento.',
+  url: 'https://andrewrosario.vercel.app',
   links: {
     blog: 'https://andrewrosario.medium.com',
     twitter: 'https://www.twitter.com/andrewarosario/',

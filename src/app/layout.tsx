@@ -4,6 +4,8 @@ import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
+import { site } from '@/config';
+
 import { BackToTop } from '@/components/BackToTop';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
@@ -21,7 +23,21 @@ export const metadata: Metadata = {
     template: '%s | Andrew Rosário',
     default: 'Andrew Rosário'
   },
-  description: 'Description',
+  description: site.title,
+  metadataBase: new URL(site.url),
+  openGraph: {
+    type: 'website',
+    title: site.name,
+    url: site.url,
+    description: site.title,
+    siteName: site.name,
+    images: [
+      {
+        url: '/assets/images/profile.jpeg'
+      }
+    ]
+  },
+  robots: 'all',
   manifest: '/manifest.json',
   themeColor: '#111010'
 };

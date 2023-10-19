@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import NextLink from 'next/link';
 
 import { talks } from '@/config';
@@ -7,6 +8,10 @@ import { Link } from '@/components/Link';
 import { Paragraph } from '@/components/Paragraph';
 import { Title } from '@/components/Title';
 import { VideoEmbed } from '@/components/VideoEmbed';
+
+export const metadata: Metadata = {
+  title: 'Talks'
+};
 
 export default function TalksPage() {
   return (
