@@ -1,10 +1,10 @@
-import { PostService } from '@/services';
+import { ArticleService } from '@/services/ArticleService';
 
 import { PostsList } from '@/components/PostsList';
 import { Profile } from '@/components/Profile';
 
 export default function Home() {
-  const posts = PostService.getAll();
+  const posts = ArticleService.getArticles();
 
   return (
     <main>

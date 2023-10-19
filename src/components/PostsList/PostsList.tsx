@@ -1,5 +1,5 @@
 import { site } from '@/config';
-import { BlogPost } from '@/types';
+import { Article } from '@/types';
 
 import { Grid } from '@/components/Grid';
 import { PostCard } from '@/components/PostCard';
@@ -7,7 +7,7 @@ import { PostCard } from '@/components/PostCard';
 import * as S from './styles';
 
 type PostsListProps = {
-  posts: BlogPost[];
+  posts: Article[];
 };
 
 export const PostsList = ({ posts }: PostsListProps) => {
