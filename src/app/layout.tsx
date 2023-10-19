@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: '/assets/images/image-post.jpeg'
+        url: '/assets/images/profile.jpeg'
       }
     ]
   },
