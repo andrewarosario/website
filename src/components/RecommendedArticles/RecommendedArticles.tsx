@@ -5,15 +5,15 @@ import { Grid } from '@/components/Grid';
 
 import * as S from './styles';
 
-export const RecommendedPosts = async () => {
-  const posts = await ArticleService.getArticles();
-  const recommendedPosts = posts.slice(0, 2);
+export const RecommendedArticles = async () => {
+  const articles = await ArticleService.getArticles();
+  const recommendedArticles = articles.slice(0, 2);
 
   return (
     <S.Container>
       <Grid>
-        {recommendedPosts.map((post) => (
-          <ArticleCard key={post.url} article={post} />
+        {recommendedArticles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
         ))}
       </Grid>
     </S.Container>
