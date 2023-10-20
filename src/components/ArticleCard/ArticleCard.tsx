@@ -23,7 +23,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
             priority
             className="rounded-xl object-cover object-center"
             src={image_url}
-            alt="title"
+            alt={title}
             fill
           />
         </S.ImageContainer>
