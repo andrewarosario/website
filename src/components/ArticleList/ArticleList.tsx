@@ -6,11 +6,11 @@ import { Grid } from '@/components/Grid';
 
 import * as S from './styles';
 
-type PostsListProps = {
-  posts: Article[];
+type ArticleListProps = {
+  articles: Article[];
 };
 
-export const PostsList = ({ posts }: PostsListProps) => {
+export const ArticleList = ({ articles }: ArticleListProps) => {
   return (
     <S.Container aria-describedby="last-posts">
       <h2
@@ -25,8 +25,8 @@ export const PostsList = ({ posts }: PostsListProps) => {
       </h2>
 
       <Grid>
-        {posts.map((post) => (
-          <ArticleCard key={post.url} article={post} />
+        {articles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
         ))}
       </Grid>
     </S.Container>
