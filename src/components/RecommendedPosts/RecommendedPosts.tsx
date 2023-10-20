@@ -1,7 +1,7 @@
 import { ArticleService } from '@/services';
 
+import { ArticleCard } from '@/components/ArticleCard';
 import { Grid } from '@/components/Grid';
-import { PostCard } from '@/components/PostCard';
 
 import * as S from './styles';
 
@@ -13,7 +13,7 @@ export const RecommendedPosts = async () => {
     <S.Container>
       <Grid>
         {recommendedPosts.map((post) => (
-          <PostCard key={post.url} post={post} />
+          <ArticleCard key={post.url} article={post} />
         ))}
       </Grid>
     </S.Container>

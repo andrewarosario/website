@@ -1,8 +1,8 @@
 import { site } from '@/config';
 import { Article } from '@/types';
 
+import { ArticleCard } from '@/components/ArticleCard';
 import { Grid } from '@/components/Grid';
-import { PostCard } from '@/components/PostCard';
 
 import * as S from './styles';
 
@@ -26,7 +26,7 @@ export const PostsList = ({ posts }: PostsListProps) => {
 
       <Grid>
         {posts.map((post) => (
-          <PostCard key={post.url} post={post} />
+          <ArticleCard key={post.url} article={post} />
         ))}
       </Grid>
     </S.Container>

@@ -6,12 +6,12 @@ import { Tag } from '@/components/Tag';
 
 import * as S from './styles';
 
-type PostCardProps = {
-  post: Article;
+type ArticleCardProps = {
+  article: Article;
 };
 
-export const PostCard = ({ post }: PostCardProps) => {
-  const { title, image_url, tags, url } = post;
+export const ArticleCard = ({ article }: ArticleCardProps) => {
+  const { title, image_url, tags, url } = article;
 
   return (
     <a href={url}>
