@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { formatDate } from '@/functions';
 import { Article } from '@/types';
 
 import { Tag } from '@/components/Tag';
@@ -11,7 +12,8 @@ type ArticleCardProps = {
 };
 
 export const ArticleCard = ({ article }: ArticleCardProps) => {
-  const { title, image_url, tags, url } = article;
+  const { title, image_url, tags, url, published_at } = article;
+  const formattedDate = formatDate(published_at);
 
   return (
     <a href={url}>
@@ -30,7 +32,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
           <S.TagsContainer>
             {tags?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
           </S.TagsContainer>
-          {/* <S.Time>{formattedDate}</S.Time> */}
+          <S.Time>{formattedDate}</S.Time>
 
           <S.Title>{title}</S.Title>
         </S.Content>
