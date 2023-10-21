@@ -26,6 +26,11 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     swcMinify: true
+  },
+  images: {
+    remotePatterns: [{
+      hostname: 'miro.medium.com'
+    }]
   }
 };
 

@@ -1,5 +1,5 @@
 import { Empty } from '@/components/Empty';
-import { RecommendedPosts } from '@/components/RecommendedPosts';
+import { RecommendedArticles } from '@/components/RecommendedArticles';
 
 export default function NotFound() {
   return (
@@ -10,7 +10,7 @@ export default function NotFound() {
       <p className="mt-4 text-center text-xl text-gray-400">
         Posts recomendados para você:
       </p>
-      <RecommendedPosts />
+      <RecommendedArticles />
     </Empty>
   );
 }

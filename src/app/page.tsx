@@ -1,15 +1,15 @@
-import { PostService } from '@/services';
+import { ArticleService } from '@/services/ArticleService';
 
-import { PostsList } from '@/components/PostsList';
+import { ArticleList } from '@/components/ArticleList';
 import { Profile } from '@/components/Profile';
 
-export default function Home() {
-  const posts = PostService.getAll();
+export default async function Home() {
+  const articles = await ArticleService.getArticles();
 
   return (
     <main>
       <Profile />
-      <PostsList posts={posts} />
+      <ArticleList articles={articles} />
     </main>
   );
 }
