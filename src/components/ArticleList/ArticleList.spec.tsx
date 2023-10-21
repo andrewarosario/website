@@ -7,7 +7,7 @@ import { ArticleList } from './ArticleList';
 describe('ArticleList', () => {
   it('should render the article list header', () => {
     render(<ArticleList articles={mockArticles} />);
-    const heading = screen.getByText('Últimos posts');
+    const heading = screen.getByText('Últimos artigos');
     expect(heading).toBeVisible();
   });
 

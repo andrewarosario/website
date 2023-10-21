@@ -18,7 +18,6 @@ export const Profile = () => {
         alt="Imagem de perfil do Andrew"
         width={260}
         height={260}
-        title="profile image"
         priority
         className="rounded-full"
       />

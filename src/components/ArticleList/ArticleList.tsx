@@ -12,17 +12,14 @@ type ArticleListProps = {
 
 export const ArticleList = ({ articles }: ArticleListProps) => {
   return (
-    <S.Container aria-describedby="last-posts">
-      <h2
-        id="last-posts"
-        className="mb-7 flex items-center justify-between border-b border-b-gray-700 pb-1 text-2xl"
-      >
-        Últimos posts
+    <S.Container aria-describedby="last-articles">
+      <S.Heading id="last-articles">
+        Últimos artigos
         <S.Link href={site.links.blog}>
           Ver mais
-          <S.NextPageIcon />
+          <S.LinkIcon />
         </S.Link>
-      </h2>
+      </S.Heading>
 
       <Grid>
         {articles.map((article) => (

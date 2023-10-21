@@ -10,6 +10,17 @@ export const Container = tw.section`
     w-full
 `;
 
+export const Heading = tw.h2`
+    mb-7
+    flex
+    items-center
+    justify-between
+    border-b
+    border-b-gray-700
+    pb-1
+    text-2xl
+`;
+
 export const Link = tw(NextLink)`
     flex
     items-center
@@ -21,7 +32,7 @@ export const Link = tw(NextLink)`
     hover:text-link
 `;
 
-export const NextPageIcon = tw(ArrowRightIcon)`
+export const LinkIcon = tw(ArrowRightIcon)`
     transition-transform
     duration-300
     ease-in-out

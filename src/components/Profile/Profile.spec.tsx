@@ -1,7 +1,7 @@
 import { site } from '@/config';
 import { render, screen } from '@testing-library/react';
 
-import { Profile } from './Profile'; // Certifique-se de importar o componente corretamente
+import { Profile } from './Profile';
 
 describe('Profile Component', () => {
   it('renders profile information correctly', () => {
@@ -19,7 +19,6 @@ describe('Profile Component', () => {
     expect(socialMediaList).toBeVisible();
 
     expect(profileImage).toBeVisible();
-    expect(profileImage).toHaveAttribute('title', 'profile image');
     expect(profileImage).toHaveClass('rounded-full');
   });
 });
