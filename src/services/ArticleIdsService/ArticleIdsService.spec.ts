@@ -1,9 +1,9 @@
-import { fetchApi } from '@/functions';
+import { fetchMediumApi } from '@/functions';
 
 import { ArticleIdsService } from './ArticleIdsService';
 
-jest.mock('../../functions/fetch-api/fetch-api');
-const fetchApiMock = <jest.Mock>fetchApi;
+jest.mock('../../functions/fetch-medium-api/fetch-medium-api');
+const fetchMediumApiMock = <jest.Mock>fetchMediumApi;
 
 describe('ArticleIdsService', () => {
   afterEach(() => {
@@ -15,13 +15,13 @@ describe('ArticleIdsService', () => {
       associated_articles: ['articleId1', 'articleId2']
     };
 
-    fetchApiMock.mockResolvedValueOnce(mockAssociatedArticles);
+    fetchMediumApiMock.mockResolvedValueOnce(mockAssociatedArticles);
 
     const result = await ArticleIdsService.getIds();
 
     expect(result).toEqual(mockAssociatedArticles.associated_articles);
-    expect(fetchApiMock).toHaveBeenCalledTimes(1);
-    expect(fetchApiMock).toHaveBeenCalledWith(
+    expect(fetchMediumApiMock).toHaveBeenCalledTimes(1);
+    expect(fetchMediumApiMock).toHaveBeenCalledWith(
       `user/${process.env.MEDIUM_USER_ID}/articles`
     );
   });

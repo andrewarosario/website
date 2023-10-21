@@ -1,6 +1,6 @@
-import { fetchApi } from './fetch-api';
+import { fetchMediumApi } from './fetch-medium-api';
 
-describe('fetchApi', () => {
+describe('fetchMediumApi', () => {
   it('should return the response data as JSON', async () => {
     const mockData = {
       title: 'Test title',
@@ -11,7 +11,7 @@ describe('fetchApi', () => {
       json: jest.fn().mockResolvedValue(mockData)
     });
 
-    const result = await fetchApi('posts/1');
+    const result = await fetchMediumApi('posts/1');
 
     expect(result).toEqual(mockData);
   });
@@ -19,7 +19,9 @@ describe('fetchApi', () => {
   it('should throw an error if the request fails', async () => {
     global.fetch = jest.fn().mockRejectedValue(new Error('Request failed'));
 
-    await expect(fetchApi('posts/1')).rejects.toThrowError('Request failed');
+    await expect(fetchMediumApi('posts/1')).rejects.toThrowError(
+      'Request failed'
+    );
   });
 
   it('should pass the init object to the fetch function', async () => {
@@ -35,7 +37,7 @@ describe('fetchApi', () => {
       json: jest.fn().mockResolvedValue({})
     });
 
-    await fetchApi('posts', mockInit);
+    await fetchMediumApi('posts', mockInit);
 
     expect(global.fetch).toHaveBeenCalledWith(
       `${process.env.MEDIUM_API}/posts`,

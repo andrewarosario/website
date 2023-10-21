@@ -1,4 +1,4 @@
-export async function fetchApi<T = unknown>(
+export async function fetchMediumApi<T = unknown>(
   url: RequestInfo | URL,
   init?: RequestInit | undefined
 ) {

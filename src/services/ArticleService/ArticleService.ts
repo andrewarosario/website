@@ -1,4 +1,4 @@
-import { fetchApi } from '@/functions';
+import { fetchMediumApi } from '@/functions';
 import { Article } from '@/types';
 
 import { ArticleIdsService } from '../ArticleIdsService/ArticleIdsService';
@@ -10,7 +10,7 @@ export const ArticleService = {
     const urls = lastArticleIds.map((articleId) => `article/${articleId}`);
 
     const articles = await Promise.all(
-      urls.map((url) => fetchApi<Article>(url))
+      urls.map((url) => fetchMediumApi<Article>(url))
     );
     return articles;
   }
