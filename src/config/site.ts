@@ -11,6 +11,7 @@ export const site: Site = {
     twitter: 'https://www.twitter.com/andrewarosario/',
     linkedin: 'https://www.linkedin.com/in/andrewarosario/',
     github: 'https://www.github.com/andrewarosario/',
-    youtube: 'https://www.youtube.com/andrewrosario/'
+    youtube: 'https://www.youtube.com/andrewrosario/',
+    mentoring: 'https://bit.ly/mentoria-techexperts-angular'
   }
 };
