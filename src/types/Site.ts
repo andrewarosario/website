@@ -9,5 +9,6 @@ export type Site = {
     linkedin: string;
     github: string;
     youtube: string;
+    mentoring: string;
   };
 };
