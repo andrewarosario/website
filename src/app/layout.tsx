@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 
 import { site } from '@/config';
+import { Analytics } from '@vercel/analytics/react';
 
 import { BackToTop } from '@/components/BackToTop';
 import { Footer } from '@/components/Footer';
@@ -60,6 +61,7 @@ export default function RootLayout({
         <BackToTop />
 
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
