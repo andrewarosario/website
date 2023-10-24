@@ -19,8 +19,8 @@ export default function TalksPage() {
       <Title>Talks</Title>
 
       <Paragraph>
-        Essas são as gravações das palestras que eu apresentei. Se você acha que
-        seria legal me ter palestrando em seu evento,{' '}
+        Essas são as gravações das palestras que apresentei. Se você acha que
+        seria legal ter uma palestra minha em seu evento,{' '}
         <Link href="mailto:andrew.arosario@gmail.com">entre em contato</Link>{' '}
         comigo. 😃
       </Paragraph>
