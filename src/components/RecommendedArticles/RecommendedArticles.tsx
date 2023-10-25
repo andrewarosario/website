@@ -11,7 +11,7 @@ export const RecommendedArticles = async () => {
 
   return (
     <S.Container>
-      <Grid>
+      <Grid threeColumns={false}>
         {recommendedArticles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))}
