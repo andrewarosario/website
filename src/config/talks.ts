@@ -2,6 +2,13 @@ import { Talk } from '@/types';
 
 export const talks: Talk[] = [
   {
+    title: 'Angular Update: Guia Prático para Atualizações Sem Estresse',
+    id: 'angular-update',
+    description:
+      'Esta palestra oferece conselhos úteis e passos claros para atualizar sua aplicação Angular de versões mais antigas para as mais recentes, sem estresse. Vamos explorar ferramentas úteis, pontos de atenção e estratégias para garantir uma transição eficiente para as novas versões do Angular.',
+    url: 'https://www.youtube.com/watch?v=Y18qaM5aXw0'
+  },
+  {
     title: 'Nx: Escalando seu frontend com Monorepo',
     id: 'nx-frontend',
     description:
