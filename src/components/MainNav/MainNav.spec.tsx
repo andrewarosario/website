@@ -2,11 +2,16 @@ import { NavItem } from '@/types';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import { MainNav } from './MainNav';
-
 const mockItems: NavItem[] = [
   { title: 'Item 1', href: '/item1' },
   { title: 'Item 2', href: '/item2' }
 ];
+
+jest.mock('next/navigation', () => ({
+  usePathname() {
+    return mockItems[0].href;
+  }
+}));
 
 describe('MainNav', () => {
   it('should render title', () => {
@@ -62,5 +67,16 @@ describe('MainNav', () => {
 
     const itemsAfterClick = screen.queryAllByText('Item 1');
     expect(itemsAfterClick).toHaveLength(1);
+  });
+
+  it('should highlight active item', () => {
+    render(<MainNav items={mockItems} />);
+    const activeItem = screen.getByText('Item 1');
+    expect(activeItem).toHaveClass('text-link');
+    expect(activeItem).toHaveAttribute('aria-current', 'page');
+
+    const inactiveItem = screen.getByText('Item 2');
+    expect(inactiveItem).not.toHaveClass('text-link');
+    expect(inactiveItem).not.toHaveAttribute('aria-current');
   });
 });

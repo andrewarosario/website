@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { NavItem } from '@/types';
 
@@ -14,6 +15,7 @@ type MainNavProps = {
 
 export const MainNav = ({ items }: MainNavProps) => {
   const { isOpenMenu, handleToggleMenu } = useMainNav();
+  const pathname = usePathname();
 
   return (
     <>
@@ -23,7 +25,13 @@ export const MainNav = ({ items }: MainNavProps) => {
         <S.List>
           {items.map((item) => (
             <S.NavItem key={item.title}>
-              <Link href={item.href}>{item.title} </Link>
+              <Link
+                className={pathname === item.href ? 'text-link' : ''}
+                aria-current={pathname === item.href ? 'page' : undefined}
+                href={item.href}
+              >
+                {item.title}{' '}
+              </Link>
             </S.NavItem>
           ))}
         </S.List>
