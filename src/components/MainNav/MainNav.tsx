@@ -22,9 +22,9 @@ export const MainNav = ({ items }: MainNavProps) => {
       <S.Nav>
         <S.Title>Menu de navegação</S.Title>
 
-        <S.List>
+        <S.List role="menu">
           {items.map((item) => (
-            <S.NavItem key={item.title}>
+            <S.NavItem key={item.title} role="menuitem">
               <Link
                 className={pathname === item.href ? 'text-link' : ''}
                 aria-current={pathname === item.href ? 'page' : undefined}
@@ -47,9 +47,9 @@ export const MainNav = ({ items }: MainNavProps) => {
       {isOpenMenu && (
         <S.ContainerMobile>
           <S.NavMobile>
-            <S.ListMobile>
+            <S.ListMobile id="mobile-menu" role="menu">
               {items.map((item) => (
-                <S.ListItemMobile key={item.title}>
+                <S.ListItemMobile key={item.title} role="menuitem">
                   <Link href={item.href} onClick={handleToggleMenu}>
                     {item.title}
                   </Link>
