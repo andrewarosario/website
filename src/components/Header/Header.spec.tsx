@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { Header } from './Header';
 
 describe('Header', () => {
-  it('should render logo Logo', () => {
+  it('should render logo', () => {
     render(<Header />);
 
     const logoText = screen.getByRole('heading', { name: /andrew rosário/i });
@@ -15,12 +15,12 @@ describe('Header', () => {
   it('should render nav items', () => {
     render(<Header />);
 
-    const list = screen.getByRole('list');
+    const menu = screen.getByRole('menu');
 
-    expect(list).toBeVisible();
-    expect(list).toHaveTextContent(navItems[0].title);
-    expect(list).toHaveTextContent(navItems[1].title);
-    expect(list).toHaveTextContent(navItems[2].title);
+    expect(menu).toBeVisible();
+    expect(menu).toHaveTextContent(navItems[0].title);
+    expect(menu).toHaveTextContent(navItems[1].title);
+    expect(menu).toHaveTextContent(navItems[2].title);
   });
 
   it('should render blog button with correct href', () => {
