@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 import { site } from '@/config';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { BackToTop } from '@/components/BackToTop';
 import { Footer } from '@/components/Footer';
@@ -61,7 +62,9 @@ export default function RootLayout({
         <BackToTop />
 
         <Footer />
+
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

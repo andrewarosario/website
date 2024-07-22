@@ -26,7 +26,7 @@ export const Footer = () => {
 
         <S.CopyrightContainer>
           <S.Copyright>
-            Todos os direitos reseverdos © Andrew Rosário {fullYear}
+            Todos os direitos reservados © Andrew Rosário {fullYear}
           </S.Copyright>
         </S.CopyrightContainer>
       </S.Container>

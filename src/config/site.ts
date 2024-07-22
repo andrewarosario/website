@@ -2,7 +2,7 @@ import { Site } from '@/types';
 
 export const site: Site = {
   name: 'Andrew Rosário',
-  title: 'Senior Frontend Engineer e criador de conteúdo.',
+  title: 'Desenvolvedor Frontend, mentor e palestrante.',
   subtitle:
     'Desenvolvedor Frontend, mentor e palestrante. Apaixonado por tecnologia e por compartilhar conhecimento.',
   url: 'https://andrewrosario.com.br',
