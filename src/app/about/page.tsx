@@ -35,11 +35,11 @@ export default function AboutPage() {
       </Paragraph>
 
       <Paragraph>
-        Já atuei em diversos projetos Web e Mobile para empresas como{' '}
-        <strong>Cuca Fresca</strong>, <strong>Shift</strong> e{' '}
-        <strong>CI&T</strong>. Atualmente trabalho como Dev Frontend Senior no{' '}
-        <Link href="https://picpay.com">PicPay</Link>, onde desempenho o papel
-        de desenvolver produtos Web e também colaboro na Arquitetura do
+        Já atuei em diversos projetos Web para várias empresas. Nesses projetos,
+        liderei iniciativas, e atuei como mentor, disseminando boas práticas de
+        desenvolvimento entre as equipes. Atualmente trabalho como Dev Frontend
+        Senior no <Link href="https://picpay.com">PicPay</Link>, onde desempenho
+        o papel de desenvolver produtos Web e também colaboro na Arquitetura do
         ecossistema Web da empresa como um todo.
       </Paragraph>
 
@@ -51,25 +51,23 @@ export default function AboutPage() {
       </Paragraph>
 
       <Paragraph>
-        Logo no início da minha carreira, recebi muitos feedbacks positivos
-        sobre como eu conseguia disseminar conhecimento dentro das empresas.
-        Isso me motivou a criar um{' '}
-        <Link href={site.links.blog}>Blog no Medium</Link> e um{' '}
-        <Link href={site.links.youtube}>Canal no YouTube</Link>. Descobri que
-        era apaixonado por compartilhar conteúdos, principalmente ao perceber
-        que conseguia impactar muitas pessoas com eles.
+        Atuo também como{' '}
+        <Link href="/mentoring">Mentor de Frontend e Angular</Link>, auxiliando
+        pessoas desenvolvedoras a alavancar suas carreiras por meio de aulas
+        técnicas semanais.
+      </Paragraph>
+
+      <Paragraph>
+        Possuo um <Link href={site.links.blog}>Blog no Medium</Link> onde
+        regularmente posto artigos relacionados ao mundo do desenvolvimento Web,
+        Frontend e Angular.
       </Paragraph>
 
       <Paragraph>
         Já palestrei em diversos eventos como o{' '}
         <strong>TDC (The Developer&#39;s Conference)</strong>,{' '}
         <strong>NerdZão</strong>, <strong>Guilda de Angular do Itaú</strong> e{' '}
-        <strong>Vindi Lovecoding</strong>. E minha primeira palestra foi
-        realizada no <strong>AngularSP</strong>, um meetup que tenho muito
-        apreço, pois além de ser uma comunidade focada no framework Angular
-        (tecnologia que tenho maior expertise e é fonte da maioria dos meus
-        conteúdos), também incentiva novos desenvolvedores a darem os primeiros
-        passos como palestrantes.
+        <strong>AngularSP</strong>.
       </Paragraph>
     </main>
   );
