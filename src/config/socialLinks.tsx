@@ -3,7 +3,7 @@ import { NavItem } from '@/types';
 import {
   GithubIcon,
   LinkedinIcon,
-  TwitterIcon,
+  InstagramIcon,
   YoutubeIcon
 } from '@/components/Icons';
 
@@ -16,9 +16,9 @@ export const socialLinks: NavItem[] = [
     icon: <LinkedinIcon size={20} />
   },
   {
-    title: 'Twitter',
-    href: site.links.twitter,
-    icon: <TwitterIcon size={20} />
+    title: 'Instagram',
+    href: site.links.instagram,
+    icon: <InstagramIcon size={20} />
   },
   {
     title: 'Youtube',

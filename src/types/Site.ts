@@ -5,7 +5,7 @@ export type Site = {
   url: string;
   links: {
     blog: string;
-    twitter: string;
+    instagram: string;
     linkedin: string;
     github: string;
     youtube: string;
