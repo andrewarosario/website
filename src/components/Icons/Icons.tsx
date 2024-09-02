@@ -9,6 +9,6 @@ export {
   LinkSimpleHorizontal as LinkIcon,
   LinkedinLogo as LinkedinIcon,
   List as OpenIcon,
-  TwitterLogo as TwitterIcon,
+  InstagramLogo as InstagramIcon,
   YoutubeLogo as YoutubeIcon
 } from '@phosphor-icons/react';
